@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · 笔试面试知识整理</title>
+        <title>instancetype 与 id 的区别 · 笔试面试知识整理</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="深拷贝与浅拷贝.html" />
     
+    <link rel="prev" href="property.html" />
     
 
     </head>
@@ -87,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -139,7 +139,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="instancetype vs id.html">
+        <li class="chapter active" data-level="1.5" data-path="instancetype vs id.html">
             
                 <a href="instancetype vs id.html">
             
@@ -182,7 +182,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >instancetype 与 id 的区别</a>
     </h1>
 </div>
 
@@ -197,7 +197,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x9762;&#x8BD5;&#x77E5;&#x8BC6;&#x6574;&#x7406;">&#x9762;&#x8BD5;&#x77E5;&#x8BC6;&#x6574;&#x7406;</h1>
+                                <h2 id="instancetype-&#x548C;-id-&#x7684;&#x533A;&#x522B;"><code>instancetype</code> &#x548C; <code>id</code> &#x7684;&#x533A;&#x522B;</h2>
+<ol>
+<li><code>instancetype</code> &#x5728;&#x7C7B;&#x578B;&#x8868;&#x793A;&#x4E0A;&#xFF0C;&#x548C; <code>id</code> &#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
+<li><code>instancetype</code> &#x53EA;&#x80FD;&#x7528;&#x5728;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x4E0A;&#xFF0C;&#x4E0D;&#x80FD;&#x50CF; <code>id</code> &#x4E00;&#x6837;&#x7528;&#x5728;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x4E0A;</li>
+<li><code>instancetype</code> &#x6BD4; <code>id</code> &#x591A;&#x4E00;&#x4E2A;&#x597D;&#x5904;&#xFF1A;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x68C0;&#x6D4B; <code>instancetype</code> &#x7684;&#x771F;&#x5B9E;&#x7C7B;&#x578B;</li>
+</ol>
+<blockquote>
+<p>&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x51E1;&#x662F;&#x4F7F;&#x7528; <code>id</code> &#x7684;&#x5730;&#x65B9;&#xFF0C;&#x90FD;&#x5EFA;&#x8BAE;&#x6362;&#x6210; <code>instancetype</code></p>
+</blockquote>
 
                                 
                                 </section>
@@ -225,10 +233,10 @@
 
             
                 
-                
-                <a href="深拷贝与浅拷贝.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 深拷贝与浅拷贝">
-                    <i class="fa fa-angle-right"></i>
+                <a href="property.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 属性">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -237,7 +245,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"深拷贝与浅拷贝","level":"1.2","depth":1,"path":"深拷贝与浅拷贝.md","ref":"深拷贝与浅拷贝.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"笔试面试知识整理","gitbook":"*","description":"一些 IT 笔试面试有关知识的整理，包括基础知识，安卓，iOS 开发等，希望对大家有所帮助"},"file":{"path":"README.md","mtime":"2019-09-24T03:36:57.279Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T03:37:19.252Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"instancetype 与 id 的区别","level":"1.5","depth":1,"previous":{"title":"属性","level":"1.4","depth":1,"path":"property.md","ref":"property.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"笔试面试知识整理","gitbook":"*","description":"一些 IT 笔试面试有关知识的整理，包括基础知识，安卓，iOS 开发等，希望对大家有所帮助"},"file":{"path":"instancetype vs id.md","mtime":"2019-09-24T03:36:57.280Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T03:37:19.252Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

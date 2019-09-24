@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="instancetype vs id.html" />
+    
     
     <link rel="prev" href="事件响应链.html" />
     
@@ -139,6 +141,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5" data-path="instancetype vs id.html">
+            
+                <a href="instancetype vs id.html">
+            
+                    
+                    instancetype 与 id 的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -207,6 +222,13 @@
 <pre><code class="lang-objc"><span class="hljs-keyword">@property</span> (getter=isFinished) <span class="hljs-built_in">BOOL</span> finished;
 </code></pre>
 <p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x751F;&#x6210;&#x7684; getter &#x65B9;&#x6CD5;&#x540D;&#x4E3A; <code>isFinish</code>&#xFF0C;&#x800C;&#x4E0D;&#x662F; <code>finished</code>&#x3002;</p>
+<hr>
+<h2 id="synthesize-&#x548C;-dynamic-&#x5206;&#x522B;&#x6709;&#x4EC0;&#x4E48;&#x4F5C;&#x7528;&#xFF1F;"><code>@synthesize</code> &#x548C; <code>@dynamic</code> &#x5206;&#x522B;&#x6709;&#x4EC0;&#x4E48;&#x4F5C;&#x7528;&#xFF1F;</h2>
+<ul>
+<li><code>@property</code> &#x6709;&#x4E24;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x8BCD;&#xFF0C;&#x5206;&#x522B;&#x662F; <code>@synthesize</code> &#x548C; <code>@dynamic</code>&#x3002;&#x5982;&#x679C; <code>@synthesize</code> &#x548C; <code>@dynamic</code> &#x90FD;&#x6CA1;&#x5199;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x5C31;&#x662F; <code>@synthesize var = _var</code></li>
+<li><code>@synthesize</code> &#x7684;&#x8BED;&#x4E49;&#x662F;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x624B;&#x52A8;&#x5B9E;&#x73B0; setter &#x548C; getter&#xFF0C;&#x90A3;&#x4E48;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;&#x4F60;&#x5B9E;&#x73B0;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;</li>
+<li><code>@dynamic</code> &#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#xFF1A;&#x5C5E;&#x6027;&#x7684; setter &#x548C; getter &#x65B9;&#x6CD5;&#x7531;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x3002;&#xFF08;&#x5F53;&#x7136;&#xFF0C;&#x5BF9;&#x4E8E; readonly &#x7684;&#x5C5E;&#x6027;&#x53EA;&#x9700;&#x63D0;&#x4F9B; getter &#x5373;&#x53EF;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x88AB;&#x58F0;&#x660E;&#x4E3A; <code>@dynamic var</code>&#xFF0C;&#x7136;&#x540E;&#x4F60;&#x6CA1;&#x6709;&#x63D0;&#x4F9B; setter &#x548C; getter&#xFF0C;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5230; <code>instance.var = someVar</code>&#xFF0C;&#x7531;&#x4E8E;&#x7F3A;&#x5C11; setter &#x65B9;&#x6CD5;&#x4F1A;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x5D29;&#x6E83;&#xFF1B;&#x6216;&#x8005;&#x5F53;&#x8FD0;&#x884C;&#x5230; <code>someVar = var</code> &#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x7F3A;&#x5C11; getter &#x65B9;&#x6CD5;&#x540C;&#x6837;&#x4F1A;&#x5BFC;&#x81F4;&#x5D29;&#x6E83;&#x3002;</li>
+</ul>
 
                                 
                                 </section>
@@ -234,10 +256,14 @@
 
             
                 
-                <a href="事件响应链.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 事件响应链">
+                <a href="事件响应链.html" class="navigation navigation-prev " aria-label="Previous page: 事件响应链">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="instancetype vs id.html" class="navigation navigation-next " aria-label="Next page: instancetype 与 id 的区别">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -246,7 +272,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"属性","level":"1.4","depth":1,"previous":{"title":"事件响应链","level":"1.3","depth":1,"path":"事件响应链.md","ref":"事件响应链.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"笔试面试知识整理","gitbook":"*","description":"一些 IT 笔试面试有关知识的整理，包括基础知识，安卓，iOS 开发等，希望对大家有所帮助"},"file":{"path":"property.md","mtime":"2019-09-17T04:29:30.675Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T04:31:51.034Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"属性","level":"1.4","depth":1,"next":{"title":"instancetype 与 id 的区别","level":"1.5","depth":1,"path":"instancetype vs id.md","ref":"instancetype vs id.md","articles":[]},"previous":{"title":"事件响应链","level":"1.3","depth":1,"path":"事件响应链.md","ref":"事件响应链.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"笔试面试知识整理","gitbook":"*","description":"一些 IT 笔试面试有关知识的整理，包括基础知识，安卓，iOS 开发等，希望对大家有所帮助"},"file":{"path":"property.md","mtime":"2019-09-24T03:36:57.280Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T03:37:19.252Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
