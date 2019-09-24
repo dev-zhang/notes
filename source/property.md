@@ -31,3 +31,10 @@
 
 这种情况下，编译器生成的 getter 方法名为 ```isFinish```，而不是 ```finished```。
 
+---
+
+## ```@synthesize``` 和 ```@dynamic``` 分别有什么作用？
+
+* ```@property``` 有两个对应的词，分别是 ```@synthesize``` 和 ```@dynamic```。如果 ```@synthesize``` 和 ```@dynamic``` 都没写，默认的就是 ```@synthesize var = _var```
+* ```@synthesize``` 的语义是如果你没有手动实现 setter 和 getter，那么编译器会自动为你实现这两个方法
+* ```@dynamic``` 告诉编译器：属性的 setter 和 getter 方法由用户自己实现，不需要自动生成。（当然，对于 readonly 的属性只需提供 getter 即可）。如果一个属性被声明为 ```@dynamic var```，然后你没有提供 setter 和 getter，编译的时候没有问题，但是当程序运行到 ```instance.var = someVar```，由于缺少 setter 方法会导致程序崩溃；或者当运行到 ```someVar = var``` 时，由于缺少 getter 方法同样会导致崩溃。
